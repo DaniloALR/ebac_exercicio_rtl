@@ -22,12 +22,12 @@ const Post = () => {
                         <p className={styles['post-comment-content']}>
                             {comment}
                         </p>
-                    </li>
+                    </li> 
                 ))}
             </ul>
             <form onSubmit={handleAddComment} className={styles['post-comments-form']}>
-                <textarea value={tempComment} onChange={e => setTempComment(e.target.value)} required className={styles['post-comments-form-textarea']} />
-                <button type="submit" className={styles['post-comments-form-button']}>
+                <textarea data-testid='campo-comentar' value={tempComment} onChange={e => setTempComment(e.target.value)} required className={styles['post-comments-form-textarea']} />
+                <button data-testid='btn-comentar' type="submit" className={styles['post-comments-form-button']}>
                     Comentar
                 </button>
             </form>
